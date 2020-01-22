@@ -1,3 +1,44 @@
 body {
     background-color: chartreuse;
 }
+
+.header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.btn {
+    height: 30px;
+    width: 60px;
+    margin: 20px;
+    border: none;
+    border-radius: 8%;
+    color: white;
+    font-size: 18px;
+}
+
+.box {
+    width: 250px;
+    height: 250px;
+    margin: 40px;
+    background-color: teal;
+}
+
+.cat-btn {
+    background-color: blue;
+}
+
+.dog-btn {
+    background-color: green;
+}
+
+.dino-btn {
+    background-color: orange;
+}
