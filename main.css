@@ -10,9 +10,14 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: center;
     justify-content: center;
-    flex: 0 0 30%;
+}
+
+.container-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .btn {
@@ -38,16 +43,48 @@ body {
 }
 
 img {
-    height: 250px;
+    padding: 5px;
+    height: 150px;
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .pets {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-between;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 5px 5px black;
     margin: 10px 5px;
+    width: 275px;
+    height: 375px;
     text-align: center;
+    align-content: stretch;
+}
+
+header {
+    background-color: gray;
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.pets h3 {
     padding: 0;
+}
+
+.pets p {
+    font-size: 16px;
+}
+
+.pets footer {
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    width: 100%;
+    flex-shrink: 0;
 }
 
 footer.cat {
