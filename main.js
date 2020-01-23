@@ -220,7 +220,9 @@ const buildPetsCard = () => {
     let domString = '';
     for (let i = 0; i < pets.length; i++) {
         domString += `<div class="pets">`;
+        domString += '<header>'
         domString += `<h3>${pets[i].name}</h3>`
+        domString += '</header>'
         domString += `<img src="${pets[i].imageUrl}" alt="">`
         domString += `<p>${pets[i].color}</p>`
         domString += `<p>${pets[i].specialSkill}</p>`
