@@ -1,5 +1,5 @@
 body {
-    background-color: chartreuse;
+    background-color: white;
 }
 
 .header {
@@ -12,6 +12,7 @@ body {
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
+    flex: 0 0 30%;
 }
 
 .btn {
@@ -24,21 +25,49 @@ body {
     font-size: 18px;
 }
 
-.box {
-    width: 250px;
-    height: 250px;
-    margin: 40px;
-    background-color: teal;
-}
-
 .cat-btn {
-    background-color: blue;
+    background-color: #5BC0DF;
 }
 
 .dog-btn {
-    background-color: green;
+    background-color: #5CB85B;
 }
 
 .dino-btn {
-    background-color: orange;
+    background-color: #F0AD4E;
+}
+
+img {
+    height: 250px;
+}
+
+.pets {
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px black;
+    margin: 10px 5px;
+    text-align: center;
+    padding: 0;
+}
+
+footer.cat {
+    background-color: #DAEDF7;
+    color: #1A65C1;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+footer.dino {
+    background-color: #FDF8E3;
+    color: #FFB74D;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+
+}
+
+footer.dog {
+    background-color: #DFF0D8;
+    color: #4A984C;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
