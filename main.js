@@ -216,20 +216,47 @@ const pets = [
     selecetedDiv.innerHTML = textToPrint;
 };
 
-const buildPetsCard = () => {
+const buildPetsCard = (arr) => {
     let domString = '';
-    for (let i = 0; i < pets.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
         domString += `<div class="pets">`;
         domString += '<header>'
-        domString += `<h3>${pets[i].name}</h3>`
+        domString += `<h3>${arr[i].name}</h3>`
         domString += '</header>'
-        domString += `<img src="${pets[i].imageUrl}" alt="">`
-        domString += `<p>${pets[i].color}</p>`
-        domString += `<p>${pets[i].specialSkill}</p>`
-        domString += `<footer class="${pets[i].type}">${pets[i].type}</footer>`
+        domString += `<img src="${arr[i].imageUrl}" alt="">`
+        domString += `<p>${arr[i].color}</p>`
+        domString += `<p>${arr[i].specialSkill}</p>`
+        domString += `<footer class="${arr[i].type}">${arr[i].type}</footer>`
         domString += '</div>'
     }
     printToDom('pets', domString)
 };
 
-buildPetsCard();
+const findMyCard = (e) => {
+  const buttonId = e.target.id;
+  if (buttonId === 'reset'){
+    buildPetsCard(pets);
+  } else {
+    const myCard = [];
+    for (let i = 0; i < pets.length; i++){
+      if (pets[i].type === buttonId){
+        myCard.push(pets[i]);
+      }
+    }
+    buildPetsCard(myCard);
+  }
+};
+
+const events = () => {
+  document.getElementById('cat').addEventListener('click', findMyCard);
+  document.getElementById('dog').addEventListener('click', findMyCard);
+  document.getElementById('dino').addEventListener('click', findMyCard);
+  document.getElementById('reset').addEventListener('click', findMyCard);
+}
+
+const init = () => {
+  buildPetsCard(pets);
+  events();
+}
+
+init();
